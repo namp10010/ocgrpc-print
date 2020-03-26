@@ -1,5 +1,7 @@
 # Example gRPC server and client with OpenCensus
 
+This is a modified version from [gRPC with OpenCensus](https://github.com/census-instrumentation/opencensus-go/tree/master/examples/grpc)
+
 This example uses:
 
 * gRPC to create an RPC server and client.

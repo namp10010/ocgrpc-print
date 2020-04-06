@@ -9,7 +9,7 @@ import (
     "time"
 
     pb "../proto"
-    grpc "google.golang.org/grpc"
+    "google.golang.org/grpc"
     "go.opencensus.io/examples/exporter"
 	"go.opencensus.io/plugin/ocgrpc"
 	"go.opencensus.io/stats/view"
@@ -21,11 +21,10 @@ const (
     port = ":50051"
 )
 
-type greeterServer struct {
-}
+type greeterServer struct {}
 
 func (s *greeterServer) Greet(ctx context.Context, in *pb.HelloRequest) (*pb.HelloReply, error) {
-    //comment out the log to clear out the output of the tracing
+    //comment out the log to better show the tracing
     //log.Printf("Received request: %v", in.GetName())
 
     // start the span
